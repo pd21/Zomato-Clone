@@ -1,0 +1,19 @@
+body{
+  background-image: url('/images/owl.jpg');
+  background-size: cover;
+}
+
+div{
+  top:170px;
+  left:550px;
+  position: absolute;
+  color:dark blue;
+  font-size: 30px;
+  font-family: 'Gaegu', cursive;
+}
+
+.fa{
+  top:210px;
+  left:850px;
+  position: absolute;
+}

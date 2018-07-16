@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zomato Clone</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes|PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/styles/restaurant-home.css">
+	<link rel="stylesheet" href="/styles/icon-colors.css">
+</head>
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<div class="col s12 main-wrapper card">
+		<div class="col s12 image-container">
+			<img src="<%=restaurantDetails.featured_image%>" width="100%" height="100%"/>
+		</div>
+		<div class="col s12 inner-wrapper">
+			<div class="col s12 restaurant-name-location center">
+				<h4><%= restaurantDetails.name%></h4>
+				<p><%= restaurantDetails.location.locality_verbose%></p>
+			</div>
+			<div class="row restaurant-overview">
+				<%- include ./partials/restaurant-basic-info.ejs%>
+			</div>
+
+			<div class="row restaurant-reviews">
+				<div class="col s12">
+					<h4>Reviews</h4>
+
+					<% for(var i = 0; i < restaurantReviews.user_reviews.length; i++){ %>
+						<% var review = restaurantReviews.user_reviews[i].review %>
+						<%- include ./partials/user-review.ejs%>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

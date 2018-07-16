@@ -1,0 +1,19 @@
+{
+  "name": "zomato-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Priyanka Dey",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "request": "^2.87.0"
+  }
+}

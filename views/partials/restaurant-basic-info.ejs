@@ -1,0 +1,46 @@
+<div class="col s4 common-info">
+	<div class="col s3 icon-container center">
+		<i class="fas fa-map-marker-alt"></i>
+	</div>
+	<div class="col s9 description">
+		<%= restaurantDetails.location.address%>
+	</div>
+</div>
+
+<div class="col s4 common-info">
+	<div class="col s3 icon-container center">
+		<i class="fas fa-money-bill-wave"></i>
+	</div>
+	<div class="col s9 description">
+		<%= restaurantDetails.currency%> <%= restaurantDetails.average_cost_for_two%> for two people (approx.)
+	</div>
+</div>
+
+<div class="col s4 common-info">
+	<div class="col s3 icon-container center">
+		<i class="fas fa-utensils"></i>
+	</div>
+	<div class="col s9 description">
+		<%= restaurantDetails.cuisines%>
+	</div>
+</div>
+
+<div class="col s4 common-info">
+	<div class="col s3 icon-container center">
+		<i class="fas fa-star"></i>
+	</div>
+	<div class="col s9 description">
+		4.4 stars ( <%= restaurantDetails.user_rating.votes%> votes )
+	</div>
+</div>
+
+<% if(restaurantDetails.has_online_delivery){ %>
+	<div class="col s4 common-info">
+		<div class="col s3 icon-container center">
+			<i class="fas fa-motorcycle"></i>
+		</div>
+		<div class="col s9 description">
+			Online delivery available
+		</div>
+	</div>
+<% } %>

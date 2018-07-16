@@ -1,0 +1,19 @@
+<div class="col s6 user-review-container">
+	<div class="col s2 center profile-image-container no-padding">
+		<img src="<%= review.user.profile_image %>" height="100%" width="100%">
+	</div>
+	<div class="col s10 ">
+		<div class="col s12 user-name">
+			<%= review.user.name %>
+		</div>
+		<div class="col s12 user-rating">
+			<% for(var i = 0; i < review.rating; i++){ %>
+				<i class="fas fa-star"></i>
+			<% } %>
+		</div>
+		<div class="col s12 user-review-text">
+			<%= review.review_text %>
+		</div>
+	</div>
+</div>
+

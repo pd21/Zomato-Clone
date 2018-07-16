@@ -1,0 +1,109 @@
+.no-padding{
+  padding: 0!important;
+}
+
+body{
+  background: url('/images/banner2.jpg');
+}
+
+.main-wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-container{
+  height: 400px;
+}
+
+.inner-wrapper{
+  padding: 20px;
+}
+
+.restaurant-name-location{
+  padding-top: 10px;
+  margin-bottom: 50px;  
+}
+
+.restaurant-name-location h4{
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+}
+
+.restaurant-name-location p{
+  color: #757575;
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/***************************************** restaurant overview part **************************************************/
+
+.common-info{
+  padding: 0!important;
+  height: 70px;  
+}
+
+.common-info .icon-container{
+  height: 100%;
+}
+
+.common-info .icon-container i{
+  font-size: 40px;
+}
+
+.common-info .description{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  color: #757575;
+  height: 100%;
+}
+
+.star-rating{
+  font-weight: bold;
+  font-size: 30px;
+  color: #81c784;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/****************************************** restaurant review part ***********************************************/
+
+/* user review partial */
+
+.restaurant-reviews h4{
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;  
+}
+
+.user-review-container{
+  margin-bottom: 20px;
+}
+
+.profile-image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.profile-image-container img{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.user-review-container .user-name{
+  color: #9e9e9e;
+  font-weight: bold;
+}
+
+.user-review-container .user-review-text{
+  color: #757575;
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.user-rating .fa-star{
+  color: #81c784;
+}
+
+  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zomato Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Patua+One" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/restaurants-listing-page.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <section class="row location-search-section">
+    <div class="col s12">
+      <div class=" col s4 offset-s4">
+        <input id="locationName" type="text" placeholder="Search locality">
+      </div>
+      <div class=" col s3">
+        <button id="btn-search-location">Search</button>
+      </div>
+    </div>
+    <div class="col s12 center heading-container">
+      <h4>Popular restaurants in <%= city%></h4>
+    </div>
+  </section>
+
+  <section class="row city-locality-section">
+    <% if(location){ %>
+      <div class="col s12 locality">
+        <i class="fas fa-map-marker-alt"></i> <%= location %>
+      </div>
+    <% }%>
+  </section>
+
+  <section class="row restaurants-listing-section">
+    <div class="col s12">
+      <% for(var i = 0; i < restaurantsList.length; i++ ){ %>
+        <% var restaurant = restaurantsList[i].restaurant; %>
+        <div class="col s12 m4 restaurant-card-container">
+          <%- include ./partials/restaurant-card %>
+        </div>
+      <% } %>
+    </div>
+  </section>
+    
+  <script src="/js/restaurants-listing-page.js"></script>
+  <script>
+    var city = '<%-city%>';
+  </script>
+</body>
+</html>

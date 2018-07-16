@@ -1,0 +1,117 @@
+.location-search-section{
+	background: url('/images/restaurant-listing-page-banner.jpg');
+	filter: grayscale(30%);
+	padding-top: 5%; /* for the search form to appear slightly lower */
+}
+
+#locationName{
+	background-color: #fff;
+	border: none;
+	padding-left: 10px; /* for placeholder text */
+}
+
+#btn-search-location{
+	color: #fff;
+	background-color: #8bc34a;
+	border: 1px solid #8bc34a;
+	font-weight: bold;	
+	padding: 10px 30px;
+}
+
+#btn-search-location:active{
+	background-color: #7cb342;
+	border: 1px solid #7cb342;
+}
+
+.heading-container{ /* contains the text 'Popular restaurants in ... '*/
+	margin-bottom: 20px;
+}
+
+.heading-container h4{
+	color: #fff;
+	font-size: 40px;
+	font-family: 'Patua One', cursive;
+}
+
+.city-locality-section{ /* section which will display local area name */
+	padding: 40px 0 40px 0;
+}
+
+.locality{ /* div which actually shows the local area and location icon */
+	font-family: 'Patua One', cursive;
+	font-size: 30px;
+	padding-left: 50px!important; /*overriding default padding of materialize row*/
+	color: #212121;
+}
+
+.locality .fa-map-marker-alt{
+	color: #e57373;
+	font-size: 40px;
+	margin-right: 10px;
+}
+
+/******************************** CARD DECORATION BEGINS *******************************/
+
+
+.restaurant-card-container{
+	margin-bottom: 50px;
+}
+
+.restaurant-card{
+	padding: 0px!important; /* overriding default property of materialize grid system*/
+	box-shadow: 1px 1px 30px #bdbdbd;
+	transition: box-shadow 200ms linear;
+}
+
+.restaurant-card:hover{
+	box-shadow: 1px 1px 5px #bdbdbd;
+	cursor: pointer;
+	transition: box-shadow 200ms linear;
+}
+
+.restaurant-card-image{
+	background: url('/images/1.jpeg');
+	height: 200px; 
+	/* images provided by the api have dimentions 200px by 200px. 
+	Hence restricting the height here to 200px, in order to remove minor 
+	spacing below the image*/
+}
+
+.restaurant-card-detail{
+	padding: 10px;
+	height: 250px; /* there has to be a better solution than this */
+}
+
+.restaurant-basic-info{ /* restaurant name and rating */
+	position: relative;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+
+.restaurant-name{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	color: #424242;
+}
+
+.rating{
+	position: absolute;
+	right: 10px;
+	top: 20%;
+}
+
+.restaurant-specific-info{
+	margin: 0;
+}
+
+.info-key, .info-value{
+	padding: 0!important;
+	margin-bottom: 10px;
+}
+
+.info-value{
+	color: grey;
+	font-size: 13px;
+}
+
+/******************************** CARD DECORATION ENDS *******************************/
